@@ -1,8 +1,10 @@
 # MVC
 <pre>
 .model
-load .data
-write .data
+open .data
+foo = read .data
+if update
+  write .data
 
 .view
 open .controller
@@ -10,7 +12,7 @@ print foo
 
 .controller
 open .model
-foo = read .model
+bar = read .model
 if $1
-bar = update model $1
+  baz = update model $1
 <pre>
